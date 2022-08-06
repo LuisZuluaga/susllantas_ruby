@@ -1,5 +1,0 @@
-class AddClientToCars < ActiveRecord::Migration[7.0]
-  def change
-    add_reference :cars, :client, null: false, foreign_key: true, index: true
-  end
-end
