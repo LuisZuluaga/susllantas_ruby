@@ -28,7 +28,7 @@
 
   <div>
     <%= form.label :seller_id, style: "display: block" %>
-    <%= form.text_field :seller_id %>
+    <%= form.collection_select :seller_id, Seller.all, :id, :name %>
   </div>
 
   <div>
