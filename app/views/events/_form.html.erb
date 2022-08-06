@@ -32,6 +32,11 @@
   </div>
 
   <div>
+    <%= form.label :car_id, style: "display: block" %>
+    <%= form.collection_select :car_id, Car.all, :id, :plate %>
+  </div>
+
+  <div>
     <%= form.label :date, style: "display: block" %>
     <%= form.date_field :date %>
   </div>

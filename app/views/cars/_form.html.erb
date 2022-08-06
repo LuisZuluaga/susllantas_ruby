@@ -23,7 +23,7 @@
 
   <div>
     <%= form.label :client_id, style: "display: block" %>
-    <%= form.text_field :client_id %>
+    <%= form.collection_select :client_id, Client.all, :id, :name %>
   </div>
 
   <div>
