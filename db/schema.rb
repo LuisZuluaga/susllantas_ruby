@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_08_06_163334) do
+ActiveRecord::Schema[7.0].define(version: 2022_08_06_172518) do
   create_table "cars", force: :cascade do |t|
     t.string "plate"
     t.text "description"
@@ -35,6 +35,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_06_163334) do
     t.date "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "car_id", null: false
+    t.index ["car_id"], name: "index_events_on_car_id"
     t.index ["seller_id"], name: "index_events_on_seller_id"
   end
 
@@ -47,5 +49,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_06_163334) do
   end
 
   add_foreign_key "cars", "clients"
+  add_foreign_key "events", "cars"
   add_foreign_key "events", "sellers"
 end
