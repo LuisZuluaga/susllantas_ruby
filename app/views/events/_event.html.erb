@@ -24,4 +24,13 @@
     <%= event.date %>
   </p>
 
+  <p>
+    <% if event.images.present? %>
+      <% event.images.each do |image| %>
+        <%= image_tag image %>
+      <% end %>
+    <% else %>
+      <p>No tiene imagenes adjuntas</p>
+    <% end %>
+  </p>
 </div>
