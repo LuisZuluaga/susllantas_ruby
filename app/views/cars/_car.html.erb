@@ -1,17 +1,17 @@
 <div id="<%= dom_id car %>">
   <p>
-    <strong>Plate:</strong>
+    <strong>Placa:</strong>
     <%= car.plate %>
   </p>
 
   <p>
-    <strong>Description:</strong>
+    <strong>Descripción del carro:</strong>
     <%= car.description %>
   </p>
 
   <p>
-    <strong>Client:</strong>
-    <%= car.client_id %>
+    <strong>Cliente:</strong>
+    <%= Client.find(car.client_id).name %>
   </p>
 
 </div>

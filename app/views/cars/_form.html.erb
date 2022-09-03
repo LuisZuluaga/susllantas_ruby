@@ -12,20 +12,22 @@
   <% end %>
 
   <div>
-    <%= form.label :plate, style: "display: block" %>
+    <%= form.label "Placa", style: "display: block" %>
     <%= form.text_field :plate %>
   </div>
 
   <div>
-    <%= form.label :description, style: "display: block" %>
+    <%= form.label "Descripción", style: "display: block" %>
     <%= form.text_area :description %>
   </div>
 
   <div>
-    <%= form.label :client_id, style: "display: block" %>
+    <%= form.label "Cliente", style: "display: block" %>
     <%= form.collection_select :client_id, Client.all, :id, :name %>
   </div>
 
+  <br>
+  
   <div>
     <%= form.submit %>
   </div>
