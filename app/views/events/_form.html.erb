@@ -12,41 +12,41 @@
   <% end %>
 
   <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+    <%= form.label "Nombre", style: "display: block" %>
+    <%= form.text_field :name, required: true %>
   </div>
 
   <div>
-    <%= form.label :price, style: "display: block" %>
-    <%= form.text_field :price %>
+    <%= form.label "Precio", style: "display: block" %>
+    <%= form.text_field :price, required: true %>
   </div>
 
   <div>
-    <%= form.label :description, style: "display: block" %>
+    <%= form.label "Descripción", style: "display: block" %>
     <%= form.text_area :description %>
   </div>
 
   <div>
-    <%= form.label :seller_id, style: "display: block" %>
-    <%= form.collection_select :seller_id, Seller.all, :id, :name %>
+    <%= form.label "Vendedor", style: "display: block" %>
+    <%= form.collection_select :seller_id, Seller.all, :id, :name, required: true %>
   </div>
 
   <div>
-    <%= form.label :car_id, style: "display: block" %>
-    <%= form.collection_select :car_id, Car.all, :id, :plate %>
+    <%= form.label "Carro", style: "display: block" %>
+    <%= form.collection_select :car_id, Car.all, :id, :plate, required: true %>
   </div>
 
   <div>
-    <%= form.label :date, style: "display: block" %>
-    <%= form.date_field :date %>
+    <%= form.label "Fecha", style: "display: block" %>
+    <%= form.date_field :date, required: true %>
   </div>
 
   <div>
-    <%= form.label :images %>
+    <%= form.label "Imagenes" %>
     <%= form.file_field :images, multiple: true %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit "Crear evento" %>
   </div>
 <% end %>

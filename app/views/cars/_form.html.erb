@@ -13,7 +13,7 @@
 
   <div>
     <%= form.label "Placa", style: "display: block" %>
-    <%= form.text_field :plate %>
+    <%= form.text_field :plate, required: true%>
   </div>
 
   <div>
@@ -23,12 +23,12 @@
 
   <div>
     <%= form.label "Cliente", style: "display: block" %>
-    <%= form.collection_select :client_id, Client.all, :id, :name %>
+    <%= form.collection_select :client_id, Client.all, :id, :name, required: true %>
   </div>
 
   <br>
   
   <div>
-    <%= form.submit %>
+    <%= form.submit "Crear carro" %>
   </div>
 <% end %>

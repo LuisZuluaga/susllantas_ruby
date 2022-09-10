@@ -12,16 +12,16 @@
   <% end %>
 
   <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+    <%= form.label "Nombre", style: "display: block" %>
+    <%= form.text_field :name, required: true %>
   </div>
 
   <div>
-    <%= form.label :email, style: "display: block" %>
-    <%= form.text_field :email %>
+    <%= form.label "Email", style: "display: block" %>
+    <%= form.text_field :email, required: true %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit "Crear cliente" %>
   </div>
 <% end %>
